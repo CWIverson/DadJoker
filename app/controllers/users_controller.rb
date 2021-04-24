@@ -1,8 +1,10 @@
 class UsersController < ApplicationController
-    get '/signup' do
-        if
-
-        else 
+    get "/login" do
+        erb :'users/login'
     end
+    get "/signup" do
+        erb :'users/signup'
+    end 
+    
 
 end 
