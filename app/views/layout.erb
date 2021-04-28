@@ -14,8 +14,21 @@
     <link rel="stylesheet" href="/stylesheets/main.css" />
   </head>
   <body>
-    <div class="wrapper">
 
+    <div class="wrapper">
+      <nav>
+        
+        <%if !!session[:user_id]%>
+          <a href="/logout">Log out</a> 
+          <a href="/jokes/new">New Joke</a>
+          <a href="/jokes/library">Library</a>
+          <a href="/">Homepage</a>
+        <%else%>
+          <a href="/login">Log in</a>
+          <a href="/signup">Sign Up</a>
+        <%end%>
+      
+      </nav>
         <%= yield %>
 
       <footer class="branding">

@@ -1,0 +1,15 @@
+<form action="/jokes/edit/<%= @joke.id %>" method="POST">
+    <input type="hidden" id="hidden" name="_method" value="patch">
+
+    <label for="jokes">Joke:</label>
+    <input type="text" id="jokes" name="jokes" value="<%=@joke.jokes%>"/>
+    <br/>
+    <label for="joke_type">Joke Type:</label>
+    <input type="text" id="joke_type" name="joke_type" value="<%=@joke.joke_type%>">
+    <br/>
+    <input type="submit" value="Edit Joke">
+</form>
+<form action="/jokes/delete/<%=@joke.id%>" method="POST">
+    <input type="hidden" id="hidden" name="_method" value="DELETE"/>
+    <input type="submit" value="Delete Joke">
+</form>

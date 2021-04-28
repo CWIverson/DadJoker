@@ -10,17 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_14_021323) do
+ActiveRecord::Schema.define(version: 2021_04_24_205517) do
 
   create_table "jokes", force: :cascade do |t|
     t.string "jokes"
     t.string "joke_type"
-    t.datetime "date"
+    t.date "date"
+    t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|
     t.string "username"
-    t.datetime "date_joined"
+    t.date "date_joined"
+    t.string "email"
+    t.string "password_digest"
   end
 
 end

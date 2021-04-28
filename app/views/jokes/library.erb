@@ -1,1 +1,7 @@
 <h1>Library</h1>
+<ul>
+
+    <%@jokes.each do |joke|%>
+        <li><a href="/jokes/show/<%= joke.id%>"><%=joke.jokes%></a></li>
+    <%end%>
+</ul>

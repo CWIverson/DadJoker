@@ -5,8 +5,13 @@
     <h3>Keep track of your dad jokes</h3>
 </head>
 <body>
-    <p>hello</p>
-
+<ul>
+    <%@jokes.each do |joke|%>
+        <%if joke.user_id == @current_user.id%>
+            <li><a href="/jokes/show/<%= joke.id%>"><%=joke.jokes%></a><a href="/jokes/edit/<%= joke.id%>">   Edit</a> </li>
+        <%end%>
+    <%end%>
+</ul>
 
 </body>
 

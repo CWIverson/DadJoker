@@ -1,0 +1,4 @@
+user_1 = User.create(username:"BigDaddy2021", date_joined: "2016-05-11", email: "purplepadlocks1988@hotmail.com", password_digest: "123456")
+user_2 = User.create(username:"MySisterIsMyBestfriend", date_joined: "2017-05-05", email: "oreimoisalltimebestanime@yahoo.com", password_digest: "janet0505")
+joke_1 = Joke.create(jokes: "What do sprinters eat before a race? Nothing they fast!", joke_type: "dad joke", date: "2021-04-24", user_id: 1)
+joke_2 = Joke.create(jokes: "Two antennas met on a roof, fell in love and got married. The ceremony wasn't much but the reception was exellent!", joke_type: "non-joke", date: "2021-04-24", user_id: 2)
