@@ -37,10 +37,14 @@ class JokesController < ApplicationController
     end
     patch "/jokes/edit/:id" do
         joke = Joke.find(params[:id])
-        joke.jokes = params[:jokes]
-        joke.joke_type = params[:joke_type]
-        joke.save
-        redirect to("jokes/show/#{params[:id]}")
+        if @joke.user == current_user
+            joke.jokes = params[:jokes]
+            joke.joke_type = params[:joke_type]
+            joke.save
+            redirect to("jokes/show/#{params[:id]}")
+        else
+            redirect to("/")
+        end
     end
     delete "/jokes/delete/:id" do
         joke = Joke.find(params[:id])
